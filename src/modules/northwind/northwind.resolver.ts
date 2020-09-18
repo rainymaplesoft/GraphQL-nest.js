@@ -1,7 +1,7 @@
 import { Resolver, Query, Args, Int, ResolveField, Parent } from "@nestjs/graphql";
-import { CatProduct } from './entities/categories.entity';
+import { CatProduct } from '../../db/entity/categories.entity';
 import { NorthWindService } from "./northwind.service";
-import { Category } from "./models/category.model";
+import { CategoryProduct } from "./models/category.model";
 
 @Resolver()
 export class NorthWindResolver {
@@ -13,7 +13,7 @@ export class NorthWindResolver {
     async hello() {
         return 'hello world';
     }
-    @Query(returns => [Category], { name: 'categories' })
+    @Query(returns => [CategoryProduct], { name: 'categories' })
     async getCategories() {
         return this.northWindService.findAllViewCatProduct();
     }
