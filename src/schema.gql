@@ -2,7 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Category {
+type CategoryProduct {
   categoryName: String!
   description: String!
   productId: Int!
@@ -11,6 +11,6 @@ type Category {
 }
 
 type Query {
-  categories: [Category!]!
+  categories: [CategoryProduct!]!
   hello: String!
 }
