@@ -27,7 +27,6 @@ import { AppResolver } from './app.resolver';
   providers: [AppService, AppResolver],
 })
 export class AppModule {
-  constructor() {
     // console.log("application listening at http://localhost:3000");
   }
 }
